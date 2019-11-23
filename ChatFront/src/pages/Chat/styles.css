@@ -1,0 +1,705 @@
+.outChat{
+  width: 100%;
+  height: 100%;
+}
+
+.chatConteiner {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 13vh 77vh 0vh 10vh;
+  grid-template-areas: 'a h'
+                       'a m'
+                       'a e'
+                       'a f';
+}
+
+.chatConteinerEmojis {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 13vh 37vh 40vh 10vh;
+  grid-template-areas: 'a h'
+                       'a m'
+                       'a e'
+                       'a f';
+}
+
+@media (max-width: 750px){
+  .chatConteiner {
+    grid-template-columns: 0fr 4fr;
+  }
+
+  aside{
+    display: none;
+  }
+}
+
+.chatConteinerheader {
+  grid-area: h;
+
+  background: rgba(0,0,0,0.2);
+
+}
+
+.navbarHeaderPhoto {
+  width: 10%;
+  height: 100%;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarHeaderPhoto img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbarHeaderTexts {
+  width: 90%;
+  height: 100%;
+  float: left;
+}
+
+.navbarHeaderTextsContact {
+  height: 50%;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbarHeaderTextsDescription {
+  height: 50%;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.outChat aside {
+  grid-area: a;
+}
+
+.sidebarHeader {
+  width: 100%;
+  height: 13vh;
+
+  background: rgba(255,255,255, 0.1);
+}
+
+.sidebarHeaderPhoto {
+  width: 40%;
+  height: 100%;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarHeaderPhoto img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebarHeaderName {
+  width: 60%;
+  height: 100%;
+  float: left;
+  padding-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.sidebarHeaderName h2 {
+
+}
+
+.sidebarSearch {
+  width: 100%;
+  height: 10vh;
+
+  background: rgba(0,0,0,0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebarSearch input {
+
+  width: 80%;
+  height: 28px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+
+  padding-left: 20px;
+}
+
+.sidebarContacts {
+  width: 100%;
+  height: 77vh;
+  overflow: auto;
+  background: rgba(0,0,0, 0.2);
+  transition: 0.5s;
+}
+
+.boxContact {
+  margin: 10px auto;
+  width: 98%;
+  height: 10vh;
+  border: 2px solid white;
+  border-radius: 15px;
+  background: rgba(255,255,255, 0.1);
+  transition: 0.5s;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxContact:hover {
+  background: rgba(255,255,255, 0.2);
+}
+
+.contactPhoto {
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactPhoto img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contactName {
+  width: 70%;
+  height: 100%;
+  font-size: 16pt;
+  padding-left: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.outChat main {
+  grid-area: m;
+  background: rgba(255,255,255, 0.8);
+  overflow: auto;
+  color:black;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.messageBody {
+  width: auto;
+  height: auto;
+}
+
+.messageMainSender {
+  padding: 3px 20px;
+  margin-left: 40%;
+  max-width: 60%;
+  width: 100%;
+
+}
+
+.messageMainReceiver {
+  width: 100%;
+  max-width: 60%;
+  padding: 3px 20px;
+}
+
+.sender {
+  float: right;
+  width: auto;
+  background: rgba(255,255,255, 0.5);
+  border-radius: 10px 10px 0 10px;
+  padding: 4px 10px 7px;
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.receiver {
+  width: auto;
+  padding: 4px 10px 7px;
+  border-radius: 10px 10px 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.messageText {
+  height: 100%;
+  padding: 5px;
+  word-wrap: break-word;
+  font-size: 16px;
+  padding-bottom: 0;
+  text-align: left;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  color: #444;
+}
+
+.messageTime {
+  margin-left: 50px;
+  font-size: 12px;
+  text-align: right;
+  color: #444;
+  float: right;
+}
+
+.boxEmojisClose {
+  display: none;
+  background: white;
+  width: 100%;
+  height: 100%;
+  grid-area: e;
+  display: none;
+}
+
+.boxEmojisOpen {
+  width: 100%;
+  height: 100%;
+  grid-area: e;
+  display: flex;
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.boxEmojisContent {
+  width: 93%;
+  height: 100%;
+  overflow: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.emojiDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.emojiDiv span {
+  cursor: pointer;
+}
+
+.boxEmojisOptions {
+  width: 7%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 5px solid rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.boxEmojisOption {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxEmojisOption:hover {
+  background: rgba(0, 0, 0, 0.2)
+}
+
+.noSelected {
+  background: transparent;
+}
+
+.selected {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.selectedtwo {
+  background: red;
+}
+
+.noSelectedtwo {
+  background: blueviolet;
+}
+
+#emojiButton {
+  cursor: pointer;
+}
+
+#voiceButton {
+  cursor: pointer;
+}
+
+.outChat footer {
+  grid-area: f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,0.5);
+}
+
+.sendMessageEmoji {
+  width: 10%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendMessageText {
+  width: 80%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendMessageText input {
+  width: 95%;
+  height: 55%;
+  border: none;
+  border-radius: 15px;
+  font-size: 26px;
+  padding-left: 12px;
+}
+
+.sendMessageVoice {
+  width: 10%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emjPosition {
+  float: left;
+}
+
+
+/* ANIMACAO */
+
+
+/* INTRO */
+
+.chatConteinerheader{
+  animation: intro 1s;
+  animation-fill-mode: backwards;
+}
+
+aside {
+  animation: intro 1s;
+  animation-fill-mode: backwards;
+}
+
+footer {
+  animation: intro 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes intro {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+/* ASIDE HEADER: PHOTO, USERNAME */
+
+#photo {
+  animation: p 1s;
+  animation-fill-mode: backwards;
+}
+
+#userName {
+  animation: u 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes p {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+
+  }to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes u {
+  from{
+    opacity: 0;
+    transform: translateX(-35px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ASIDE SIDEBARSEARCH: SEARCHCONTACTS */
+
+#searchContacts {
+  animation: sc 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes sc {
+  from{
+    opacity: 0;
+    transform: scale(0.8);
+
+  }to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ASIDE SIDEBARCONTACTS: BOXCONTACT, CONTACTPHOTO, CONTACTNAME */
+
+.boxContact {
+  animation: bc 1.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
+
+.contactPhoto {
+  animation: bp 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+.contactName {
+  animation: bn 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes bc {
+  from{
+    opacity: 0;
+    transform:  translateY(-500px);
+
+  }to{
+    opacity: 1;
+    transform:  translateY(0);
+  }
+}
+
+@keyframes bp {
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+
+  }to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bn {
+  from{
+    opacity: 0;
+    transform: translateX(-35px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* CHATCONTAINERHEADER: CONTACTPHOTO, CONTACTNAME, CONTACT DESCRIPTION */
+
+#contactPhoto {
+  animation: cp 1s;
+  animation-fill-mode: backwards;
+}
+
+#contactName {
+  animation: cn 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+#contactDescription {
+  animation: cd 1s linear;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cp{
+  from{
+    opacity: 0;
+    transform: scale(0.5);
+
+  }to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cn{
+  from{
+    opacity: 0;
+    transform: translateX(-15px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cd{
+  from{
+    opacity: 0;
+    transform: translateX(-15px);
+  }to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* BOXEMOJI: BOXEMOJISCONTENT, BOXEMOJIOPTIONS, BOXEMOJIOPTION */
+
+.boxEmojisOptions {
+  animation: emjOptions 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(1) svg{
+  animation: emjOption 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(2) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 0.15s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(3) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(4) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 0.45s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(5) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 0.6s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(6) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.boxEmojisOption:nth-child(7) svg{
+  animation: emjOption 0.3s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes emjOptions {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+
+@keyframes emjOption {
+  from{
+    opacity: 0;
+    transform: rotate(360deg);
+  }to{
+    opacity: 1;
+
+  }
+}
+
+
+
+/* FOOTER: EMOJI, INPUT, VOICE */
+
+#emojiButton {
+  animation: fa 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+#message {
+  animation: fa 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
+
+#voiceButton {
+  animation: fa 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fa {
+  from{
+    opacity: 0;
+    transform: translateX(-35px) scale(0.8);
+  }to{
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+
