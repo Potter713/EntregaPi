@@ -17,7 +17,7 @@
 ### Possuimos dois frontends e dois backends, um para o dashboard e o outro para o chat.
 ### Ambos os backends estao hospedados no heroku e configurados devidamente no front, assim como o banco de dados.
 ### Para abrir tanto o Dashboard quanto o Chat basta apenas instalar as dependencias (yarn install ou npm install) e depois rodar o comando yarn start ou npm start, lembrando que o nodejs deve estar instalado na sua maquina, tambem o yarn, caso opte por ele.
-### Apos abrir o Dashboard voce caira em uma tela de login aonde o unico email e senha possiveis pra se autenticar sao: Email: cesar.simionato@sou.unifeob.edu.br, Senha: 7531.
+### Apos abrir o Dashboard voce caira em uma tela de login aonde o unico email e senha possiveis para se autenticar sao: Email: cesar.simionato@sou.unifeob.edu.br, Senha: 7531.
 ### Todos o pacientes cadastrados no Dashboard tem acesso ao chat, assim como o psicologo, para se autenticar basta apenas digitar o email obtido no Dashboard admin/patients e a senha: 1234. Caso queira criar um novo paciente a senha sera iqual ao rg que vc definir pra ele.
 ### Caso queira testar o chat em tempo real basta abrir uma janela normal e outra anonima.
 ## Exemplo:
